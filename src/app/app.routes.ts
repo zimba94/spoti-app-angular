@@ -1,0 +1,14 @@
+import { Routes } from '@angular/router';
+import { HomeComponent } from './components/home/home.component';
+import { SearchComponent } from './components/search/search.component';
+import { ArtistComponent } from './components/artist/artist.component';
+
+export const ROUTES: Routes = [
+    {path: 'home', component: HomeComponent},
+    {path: 'search', component: SearchComponent},
+    {path: 'home', component: HomeComponent},
+    {path: 'artist/:id', component: ArtistComponent},
+    {path: '', pathMatch:'full', redirectTo: 'home'},//vacio
+    {path: '**', pathMatch:'full', redirectTo: 'home'}//cualquier otro path
+
+];
